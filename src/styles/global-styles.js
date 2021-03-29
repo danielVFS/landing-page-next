@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -18,15 +18,19 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${({ theme }) => theme.font.family.secondary};
     margin: ${({ theme }) => theme.spacings.large} 0;
   }
-  p {
-    margin: ${({ theme }) => theme.spacings.medium} 0;
+  a {
+    color: ${({ theme }) => theme.colors.secondaryColor};
+    text-decoration: none;
   }
   ul, ol {
     margin: ${({ theme }) => theme.spacings.medium};
     padding: ${({ theme }) => theme.spacings.medium};
   }
-  a {
-    color: ${({ theme }) => theme.colors.secondaryColor};
+  button {
+    cursor: pointer;
+  }
+  p {
+    margin: ${({ theme }) => theme.spacings.large} 0;
   }
   .table {
     width: 100%;
