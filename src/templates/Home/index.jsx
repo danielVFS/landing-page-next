@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 import { BaseTemplate } from '../BaseTemplate';
 
-import { PageNotFound } from '../PageNotFound';
+import { theme } from '../../styles/theme';
 
 import { GridTwoColumns } from '../../components/GridTwoColumns';
 import { GridContent } from '../../components/GridContent';
@@ -25,7 +25,14 @@ export default function Home({ data }) {
         <title>
           {title} | {config.siteName}
         </title>
+
+        <meta name="theme-color" content={theme.colors.primaryColor} />
+        <meta
+          name="description"
+          content="As landing pages mais legais da Internet."
+        />
       </Head>
+
       {sections.map((section, index) => {
         const { component } = section;
         const key = `${slug}-${index}`;
