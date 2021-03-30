@@ -1,8 +1,6 @@
 import P from 'prop-types';
 import Head from 'next/head';
 
-import * as Styled from './styles';
-
 import { BaseTemplate } from '../BaseTemplate';
 
 import { PageNotFound } from '../PageNotFound';
@@ -14,10 +12,6 @@ import { GridText } from '../../components/GridText';
 import config from '../../config';
 
 export default function Home({ data }) {
-  if (!data || !data.length) {
-    return <PageNotFound />;
-  }
-
   const { menu, sections, footerHtml, slug, title } = data[0];
   const { links, text, link, srcImg } = menu;
 
