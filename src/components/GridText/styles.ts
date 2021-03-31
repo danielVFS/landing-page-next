@@ -29,21 +29,19 @@ export const Grid = styled.div`
 `;
 
 export const GridElement = styled.div`
-  ${({ theme }) => css`
-    ${HeadingContainer} {
-      position: relative;
-      left: 5rem;
-    }
+  ${HeadingContainer} {
+    position: relative;
+    left: 5rem;
+  }
 
-    ${HeadingContainer}::before {
-      position: absolute;
-      counter-increment: grid-counter;
-      content: counter(grid-counter);
+  ${HeadingContainer}::before {
+    position: absolute;
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
 
-      font-size: 7rem;
-      top: -3rem;
-      left: -5rem;
-      transform: rotate(8deg);
-    }
-  `}
+    font-size: 7rem;
+    top: -3rem;
+    left: -5rem;
+    transform: rotate(8deg);
+  }
 `;
