@@ -69,7 +69,7 @@ describe('<Heading />', () => {
 
   it('should render correct font-size when using mobile', () => {
     renderTheme(<Heading size="huge">Text</Heading>);
-    const heading = screen.getByRole('heading', { name: 'Text' });
+    screen.getByRole('heading', { name: 'Text' });
 
     expect(screen.getByRole('heading', { name: 'Text' })).toHaveStyleRule(
       'font-size',
