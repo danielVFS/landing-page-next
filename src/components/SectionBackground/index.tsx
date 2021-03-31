@@ -1,17 +1,20 @@
-import P from 'prop-types';
 import { SectionContainer } from '../SectionContainer';
 import * as Styled from './styles';
 
-export const SectionBackground = ({ children, background, sectionId = '' }) => {
+export type SectionBackgroundProps = {
+  children: React.ReactNode;
+  background?: boolean;
+  sectionId?: string;
+};
+
+export const SectionBackground = ({
+  children,
+  background,
+  sectionId = '',
+}: SectionBackgroundProps) => {
   return (
     <Styled.Container background={background} id={sectionId}>
       <SectionContainer>{children}</SectionContainer>
     </Styled.Container>
   );
-};
-
-SectionBackground.propTypes = {
-  children: P.node.isRequired,
-  background: P.bool,
-  sectionId: P.string,
 };
