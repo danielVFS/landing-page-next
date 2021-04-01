@@ -1,11 +1,24 @@
-import P from 'prop-types';
 import * as Styled from './styles';
 
 import { Menu } from '../../components/Menu';
 import { Footer } from '../../components/Footer';
 import { GoTop } from '../../components/GoTop';
+import { MenuLinkProps } from '../../components/MenuLink';
+import { LogoLinkProps } from '../../components/LogoLink';
 
-export const BaseTemplate = ({ links, logoData, footerHtml, children }) => {
+export type BaseTemplateProps = {
+  children: React.ReactNode;
+  links: MenuLinkProps[];
+  logoData: LogoLinkProps;
+  footerHtml: string;
+};
+
+export const BaseTemplate = ({
+  links,
+  logoData,
+  footerHtml,
+  children,
+}: BaseTemplateProps) => {
   return (
     <>
       <Menu links={links} logoData={logoData} />
@@ -16,10 +29,4 @@ export const BaseTemplate = ({ links, logoData, footerHtml, children }) => {
       <GoTop />
     </>
   );
-};
-
-BaseTemplate.propTypes = {
-  children: P.node.isRequired,
-  ...Menu.propTypes,
-  footerHtml: P.string.isRequired,
 };
