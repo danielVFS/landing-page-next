@@ -15,12 +15,11 @@ import config from '../../config';
 import { LogoLinkProps } from '../../components/LogoLink';
 import { MenuLinkProps } from '../../components/MenuLink';
 
-export type SectionProps = (
+export type SectionProps =
   | GridImageProps
   | GridContentProps
   | GridTwoColumnsProps
-  | GridTextProps
-) & { component: string };
+  | GridTextProps;
 
 export type PageData = {
   title: string;

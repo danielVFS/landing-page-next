@@ -15,6 +15,7 @@ export type GridImageProps = {
   grid: GridElementProps[];
   background?: boolean;
   sectionId?: string;
+  component?: string;
 };
 
 export const GridImage = ({
