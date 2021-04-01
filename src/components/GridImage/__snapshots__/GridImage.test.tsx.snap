@@ -1,12 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<GridImage /> should render with background 1`] = `
-.c3 {
-  color: #0A1128;
-  font-size: 6.4rem;
-  text-transform: uppercase;
-}
-
 .c5 {
   font-size: 2.4rem;
 }
@@ -62,15 +56,21 @@ exports[`<GridImage /> should render with background 1`] = `
   align-items: center;
 }
 
-@media (max-width:768px) {
-  .c3 {
-    font-size: 4.0rem;
-  }
+.c3 {
+  color: #0A1128;
+  font-size: 6.4rem;
+  text-transform: uppercase;
 }
 
 @media (max-width:768px) {
   .c6 {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:768px) {
+  .c3 {
+    font-size: 4.0rem;
   }
 }
 
@@ -160,12 +160,6 @@ exports[`<GridImage /> should render with background 1`] = `
 `;
 
 exports[`<GridImage /> should render without background 1`] = `
-.c3 {
-  color: #0A1128;
-  font-size: 6.4rem;
-  text-transform: uppercase;
-}
-
 .c5 {
   font-size: 2.4rem;
 }
@@ -221,15 +215,21 @@ exports[`<GridImage /> should render without background 1`] = `
   align-items: center;
 }
 
-@media (max-width:768px) {
-  .c3 {
-    font-size: 4.0rem;
-  }
+.c3 {
+  color: #0A1128;
+  font-size: 6.4rem;
+  text-transform: uppercase;
 }
 
 @media (max-width:768px) {
   .c6 {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:768px) {
+  .c3 {
+    font-size: 4.0rem;
   }
 }
 

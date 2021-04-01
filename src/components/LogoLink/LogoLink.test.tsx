@@ -44,6 +44,14 @@ describe('<LogoLink />', () => {
     ).toBeInTheDocument();
   });
 
+  it('should render a link with target blank', () => {
+    renderTheme(<LogoLink link="/" text="Hello World" newTab={true} />);
+
+    expect(
+      screen.getByRole('heading', { name: 'Hello World' }),
+    ).toBeInTheDocument();
+  });
+
   it('should match snapshot', () => {
     const { container } = renderTheme(
       <LogoLink link="#target" text="Hello World" srcImg="image.jpg" />,
